@@ -26,7 +26,7 @@ pipeline {
     }
     post {
         failure {
-            mail to: tnakamoto@tmt.org, subject: 'Pipeline failed'
+            mail to: 'tnakamoto@tmt.org', subject: 'Pipeline failed'
         }
     }
 }
