@@ -1,5 +1,6 @@
 pipeline {
-    agent any
+//    agent any
+    agent { image 'ubuntu:22.04' }
 
     stages {
         stage('Build') {
