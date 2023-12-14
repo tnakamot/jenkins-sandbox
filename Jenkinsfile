@@ -2,8 +2,16 @@ pipeline {
 
 //    agent any
 
+//    agent {
+//        docker { image 'ubuntu:22.04' }
+//    }
+
     agent {
-        docker { image 'ubuntu:22.04' }
+        dockerfile {
+            filename 'Dockerfile'
+            label 'docker-image-name'
+            additionalBuildArgs  '--build-arg UID=987 --build-arg GID=987'
+        }
     }
 
     stages {
