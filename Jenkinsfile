@@ -1,6 +1,10 @@
 pipeline {
+
 //    agent any
-    agent { image 'ubuntu:22.04' }
+
+    agent {
+        docker { image 'ubuntu:22.04' }
+    }
 
     stages {
         stage('Build') {
