@@ -9,7 +9,6 @@ pipeline {
     agent {
         dockerfile {
             filename 'Dockerfile'
-            label 'docker-image-name'
             additionalBuildArgs  '--build-arg UID=987 --build-arg GID=987'
         }
     }
